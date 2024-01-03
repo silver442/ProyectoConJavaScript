@@ -1,10 +1,13 @@
 $(document).ready(function(){
-    $('.galeria').bxSlider({
-        mode: 'fade',
-        captions: true,
-        slideWidth: 1200,
-        Responsive: true
-      });
+
+    // Slider
+    if(window.location.href.indexOf('index') > -1){
+        $('.galeria').bxSlider({
+            mode: 'fade',
+            captions: true,
+            slideWidth: 1200,
+            Responsive: true
+          });
 
       // Posts
       var posts = [
@@ -56,7 +59,7 @@ $(document).ready(function(){
 
         $("#posts").append(post);
       });
-
+    }
       // Selector de tema
       var theme = $("#theme");
 
@@ -103,6 +106,12 @@ $(document).ready(function(){
             localStorage.clear();
             location.reload();
         });
+   }
+
+   if(window.location.href.indexOf('about') > -1){
+
+    $("#acordeon").accordion();
+
    }
 
 });
