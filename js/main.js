@@ -22,18 +22,18 @@ $(document).ready(function(){
         {
             title: 'Prueba de titulo 3',
             date: "publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
-            content: "aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum "
+            content: "aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum rerum numquam amet a quia. Lorem ipsum "
         
         },
         {
             title: 'Prueba de titulo 4',
             date: "publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
-            content: "aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum "
+            content: "aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsumaliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum rerum numquam amet a quia. Lorem ipsum "
         },
         {
             title: 'Prueba de titulo 5',
             date: "publicado el dia " + moment().date() + " de " + moment().format("MMMM") + " del " + moment().format("YYYY"),
-            content: "aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum "
+            content: "aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum aliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsumaliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsumaliquam quisquam voluptas cupiditate iusto, culpa excepturi, sunt rerum numquam amet a quia. Lorem ipsum"
         },
         {
             title: 'Prueba de titulo 6',
@@ -70,5 +70,15 @@ $(document).ready(function(){
 
       $("#to-blue").click(function(){
         theme.attr("href", "css/blue.css");
+      });
+
+      // Scroll arriba de la web
+      $('.subir').click(function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
+
+        return false;
       });
 });
